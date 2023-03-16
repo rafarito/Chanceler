@@ -10,5 +10,10 @@ se quiser implementar certifique-se de executar os seguintes comandos no termina
 npm init  //dê enter em todas as opções
 npm install discord.js
 npm install fs
+em seguida crie um arquivo chamado config.json e escreva:
+
+{
+  "token": "token do bot aqui"
+}
 
 para funcionar todos os diretorios gerados devem estar no mesmo nivel do index.js
