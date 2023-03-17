@@ -3,7 +3,7 @@ const { user } = require("../..")
 
 module.exports = {
   name: "motivacional", // Coloque o nome do comando
-  description: "vai te ajudar nos piores momentos.", // Coloque a descrição do comando
+  description: "mande uma mensagem motivacional para um irmão", // Coloque a descrição do comando
   type: Discord.ApplicationCommandType.ChatInput,
   options: [
     {
