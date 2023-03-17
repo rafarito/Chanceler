@@ -1,5 +1,6 @@
 const Discord = require("discord.js")
-const DONO = "554016380576596008"; // Coloque seu ID
+const RAFAEL = "554016380576596008"; // Coloque seu ID
+const BORBA = "480072058936492033";
 
 module.exports = {
   name: "comissões", // Coloque o nome do comando
@@ -43,15 +44,15 @@ module.exports = {
     switch (com){
       case "com_membros":
         var titulo = `Comissão de Encremento de Novos Membros`
-        var descricao = `Olá ${interaction.user}\n\nEsta comissão é responsavel por realizar campanhas para aderir novos membros, se você conhece alguem que quer indicar, entre em contato com membros da comissão ou com seu preseidente ${client.users.cache.get(DONO)}.`
+        var descricao = `Olá ${interaction.user}\n\nEsta comissão é responsavel por realizar campanhas para aderir novos membros, se você conhece alguem que quer indicar, entre em contato com membros da comissão ou com seu preseidente ${client.users.cache.get(RAFAEL)}.`
       break;
       case "com_hosp":
         var titulo = `Comissão de Hospitalaria`
-        var descricao = `Olá ${interaction.user}\n\nEsta comissão é responsavel` // ainda não sei descrever exatamente essa comissão
+        var descricao = `Olá ${interaction.user}\n\nEsta comissão é responsavel por receber e ajudar os membros em momentos ruins ` // ainda não sei descrever exatamente essa comissão
       break;
       case "com_audi":
         var titulo = `Comissão de Auditoria`
-        var descricao = `c` // ainda não sei descrever exatamente essa comissão
+        var descricao = `Olá ${interaction.user}\n\nEsta comissão é responsavel por fiscalizar e verificar o trabalho das demais comissões, se possuir duvidas sobre processos burocraticos favor contatar membros da comissão ou o presidente ${client.users.cache.get(BORBA)}.` // ainda não sei descrever exatamente essa comissão
       break;
       case "com_entre":
         var titulo = `Comissão de Entreterimento`
