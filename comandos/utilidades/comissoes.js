@@ -52,7 +52,7 @@ module.exports = {
       break;
       case "com_audi":
         var titulo = `Comissão de Auditoria`
-        var descricao = `Olá ${interaction.user}\n\nEsta comissão é responsavel por fiscalizar e verificar o trabalho das demais comissões, se possuir duvidas sobre processos burocraticos favor contatar membros da comissão ou o presidente ${client.users.cache.get(BORBA)}.` // ainda não sei descrever exatamente essa comissão
+        var descricao = `Olá ${interaction.user}\n\nEsta comissão é responsavel por fiscalizar e verificar o trabalho das demais comissões, se possuir duvidas sobre processos burocraticos favor contatar membros da comissão ou o presidente <@${BORBA}>.` // ainda não sei descrever exatamente essa comissão
       break;
       case "com_entre":
         var titulo = `Comissão de Entreterimento`
