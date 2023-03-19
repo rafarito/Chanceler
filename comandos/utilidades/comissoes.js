@@ -48,7 +48,7 @@ module.exports = {
       break;
       case "com_hosp":
         var titulo = `Comissão de Hospitalaria`
-        var descricao = `Olá ${interaction.user}\n\nEsta comissão é responsavel por receber e ajudar os membros em momentos ruins ` // ainda não sei descrever exatamente essa comissão
+        var descricao = `Olá ${interaction.user}\n\nEsta comissão é responsavel por receber e ajudar os membros em momentos ruins e organizar as filantropias em caso de duvida ou interesse entre em contato com seus membros ou com seu presidente \`Luis Henrique\`` // ainda não sei descrever exatamente essa comissão
       break;
       case "com_audi":
         var titulo = `Comissão de Auditoria`
@@ -60,7 +60,7 @@ module.exports = {
       break;
       case "com_fin":
         var titulo = `Comissão de Finanças`
-        var descricao = `f` // ainda não sei descrever exatamente essa comissão
+        var descricao = `Olá ${interaction.user}\n\nEsta comissão fica responsavel por cuidar do caixa do capitulo, em caso de interesse ou duvida contate seus membros ou o seu presidente \`Danilo Klein\`` // ainda não sei descrever exatamente essa comissão
       break;
     }
 
