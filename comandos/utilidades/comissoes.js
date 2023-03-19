@@ -12,7 +12,7 @@ module.exports = {
         name: "comissão",
         description: "selecione a comissão desejada",
         required: true,
-        choices: [
+        choices: [        //está é a estrutura para adicionar escolhas fixas em seu comando
             {
                 name: "encremento de novos membros",
                 value: "com_membros",

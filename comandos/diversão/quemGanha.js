@@ -36,7 +36,7 @@ module.exports = {
         `${user} sensato como sempre.`,
         `${user} é o dono da razão.`
     ];
-    let frase = frases[Math.floor(Math.random() * frases.length)];
+    let frase = frases[Math.floor(Math.random() * frases.length)]; //essa estrutura funciona bem pra escolher uma frase aleatoria de um array
     interaction.reply({content: frase, ephemeral: false});
 
   }

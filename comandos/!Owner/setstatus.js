@@ -8,7 +8,7 @@ module.exports = {
         {
             type: Discord.ApplicationCommandOptionType.String,
             name: "status",
-            description: "Qual estilo você deseja aplicar (online, dnd, idle, invisible)?",
+            description: "Qual estilo você deseja aplicar (online, dnd, idle, invisible)?", //por algum motivo essa parte não funciona, sinta-se livre para me ajudar com isso
             required: true,
         },
         {
