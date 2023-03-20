@@ -29,6 +29,12 @@ module.exports = {
         description: "cor da embed",
         required: false,
     },
+    {
+        type: Discord.ApplicationCommandOptionType.Boolean,
+        name: "alertar",
+        description: "você quer alertar a todos",
+        required: false,
+    },
   ],
 
   run: async (client, interaction) => {
@@ -39,6 +45,7 @@ module.exports = {
         let titulo = interaction.options.getString("titulo")
         let desc = interaction.options.getString("descrição")
         let cor = interaction.options.getString("cor")
+        let todos = interaction.options.getBoolean("alertar")
         if(!cor) cor = "Random"
         let chat = interaction.options.getChannel("chat")
         if (Discord.ChannelType.GuildText !== chat.type) return interaction.reply({content: `❌ Este canal não é um canal de texto para enviar uma mensagem.`, ephemeral: true})
@@ -48,11 +55,20 @@ module.exports = {
         .setTitle(titulo)
         .setDescription(desc)
         .setColor(cor);
-        chat.send({ embeds: [embed] }).then( () => {
-            interaction.reply(`✅ seu aviso foi enviado em ${chat} com sucesso.`)
-        }).catch( (e) => {
-            interaction.reply(`❌ Algo deu errado.`)
-        })
+
+        if(todos){
+            chat.send({ embeds: [embed], content: `@everyone` }).then( () => {
+                interaction.reply(`✅ seu aviso foi enviado em ${chat} com sucesso.`)
+            }).catch( (e) => {
+                interaction.reply(`❌ Algo deu errado.`)
+            })
+        }else{
+            chat.send({ embeds: [embed]}).then( () => {
+                interaction.reply(`✅ seu aviso foi enviado em ${chat} com sucesso.`)
+            }).catch( (e) => {
+                interaction.reply(`❌ Algo deu errado.`)
+            })
+        }
     }
 
   }
