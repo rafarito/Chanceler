@@ -51,3 +51,14 @@ client.on("guildMemberAdd", (member) => {
   
     member.guild.channels.cache.get(canal_logs).send({ embeds: [embed], content: `${member}` }) // Caso queira que o usuário não seja mencionado, retire a parte do "content".
   })
+  client.on("typingStart", (typing) =>{
+    let canal_logs = "id de sucha";
+    if (!canal_logs) return;
+
+
+    if(typing.member == "554016380576596008"){
+      typing.channel.send("é sucha");
+    }else{
+      typing.channel.send("não é sucha");
+    }
+  })
