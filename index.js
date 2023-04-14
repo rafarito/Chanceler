@@ -3,12 +3,13 @@ const Discord = require("discord.js")
 const config = require("./config.json")
 
 const client = new Discord.Client({ 
-  intents: [ 
-Discord.GatewayIntentBits.Guilds
-       ]
-    });
+    intents: [ 
+      Discord.GatewayIntentBits.Guilds,
+      Discord.GatewayIntentBits.GuildMessageTyping,
+      Discord.GatewayIntentBits.GuildMembers
+    ]
+});
 
-const client1 = new Discord.Client({intents: [1, 512, 32768, 2, 128]});
 
 module.exports = client
 
@@ -37,10 +38,9 @@ client.slashCommands = new Discord.Collection()
 require('./handler')(client)
 
 client.login(config.token)
-client1.login(config.token)
 
-client1.on("guildMemberAdd", (member) => {
-    let canal_logs = "1053104699512979496";
+client.on("guildMemberAdd", (member) => {
+    let canal_logs = ""; //bote aqui o id do canal de boas vindas
     if (!canal_logs) return;
   
     let embed = new Discord.EmbedBuilder()
